@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Game of Life</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- <link rel="import" href="game_of_life.html">  -->
+    <!-- This is the bootstrap script for Polymer. 
+         Use this INSTEAD of dart.js -->
+    <script src="packages/polymer/boot.js"></script>
+  </head>
+  <body>
+    <!-- <game-of-life></game-of-life>  -->
+    <div id="container">
+      <h1>Game of Life</h1>
+      <canvas id="world"></canvas>
+      <div>
+        <button id="play">Start</button>
+        <button id="reset">Reset</button>
+      </div>   
+    </div>
+    <script type="application/dart" src="index.dart"></script>
+  </body>
+</html>
