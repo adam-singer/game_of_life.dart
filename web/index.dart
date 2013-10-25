@@ -1,18 +1,15 @@
 library game_of_life;
 
-//import 'package:polymer/polymer.dart';
 import 'package:quiver/iterables.dart';
 import 'dart:math';
 import 'dart:async';
 import 'dart:html';
 
-// TODO add @published to configure them.
 const int CELL_SIDE = 5;
 const int NUMBER_OF_ACROSS_CELLS = 100;
 const int NUMBER_OF_DOWN_CELLS = 100;
 const int MILLISECONDS = 100;
 
-// TODO custom-tag?
 class World {
   Cells _cells;
   CanvasElement _canvas;
@@ -74,7 +71,7 @@ class World {
 class Cells {
   List<List<Cell>> _cells;
   Map<Cell, List<Cell>> _neighbors;
-  List<List<int>> _neighborRelativeCoordinates = [[-1, -1], [-1, 0], [-1, 1], [0, -1], [0, 1], [1, -1], [1, 0], [1, 1]];
+  final List<List<int>> _neighborRelativeCoordinates = [[-1, -1], [-1, 0], [-1, 1], [0, -1], [0, 1], [1, -1], [1, 0], [1, 1]];
 
   Cells() : this._cells = _buildCells() {
     _neighbors = _buildNeighbors();
@@ -164,7 +161,7 @@ void main() {
   var playButton = querySelector('#play');
   playButton.onClick.listen((e) {
     world.toggle();
-    e.target.text = world._isPlaying ? 'Pause' : 'Resume';
+    e.target.text = world.isPlaying ? 'Pause' : 'Resume';
   });
   querySelector('#reset').onClick.listen((e) {
     world.reset();
