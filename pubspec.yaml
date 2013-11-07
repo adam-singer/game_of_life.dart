@@ -1,5 +1,5 @@
 name: game_of_life
-description: Game of Life implementation.
+description: Game of Life implementation with Polymer.
 dependencies:
   polymer: any
   quiver: any

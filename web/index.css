@@ -6,29 +6,3 @@ body {
   line-height: 1.2em;
   margin: 15px;
 }
-
-#container {
-  margin: 0 auto;
-  text-align:center;
-  width:650px;
-}
-
-h1 {
-  color: #333;
-  margin: 30px;
-}
-
-#world {
-  background-color: white;
-  margin: 0 auto;
-}
-
-#play {
-  width: 100px;
-  padding: 10px; 
-}
-
-#reset {
-  width: 100px;
-  padding: 10px;  
-}

@@ -1,5 +1,6 @@
 import 'package:polymer/builder.dart';
 
-main() {
-  build(entryPoints: ['web/index.html']);
+main(args) {
+  build(entryPoints: ['web/index.html'],
+        options: parseOptions(args));
 }

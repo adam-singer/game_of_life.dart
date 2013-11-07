@@ -1,8 +1,43 @@
 <!DOCTYPE html>
+<link rel="import" href="the_world.html">
 
 <polymer-element name="game-of-life">
   <template>
-    
+    <style>    
+      #container {
+        margin: 0 auto;
+        text-align:center;
+        width:650px;
+      }
+      
+      h1 {
+        color: #333;
+        margin: 30px;
+      }
+      
+      #world {
+        background-color: white;
+        margin: 0 auto;
+      }
+      
+      #play {
+        width: 100px;
+        padding: 10px; 
+      }
+      
+      #reset {
+        width: 100px;
+        padding: 10px;  
+      }
+    </style>
+    <div id="container">
+      <h1>Game of Life</h1>
+      <canvas is="the-world" id="world"></canvas>
+      <div>
+        <button id="play" on-click="{{toggle}}">{{toggleButtonName}}</button>
+        <button id="reset" on-click="{{reset}}">Reset</button>
+      </div>   
+    </div>
   </template>
   <script type="application/dart" src="game_of_life.dart"></script>
 </polymer-element>
